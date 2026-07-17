@@ -5,12 +5,12 @@
 ## 🫡Let's go Space Cadets!
 The main goal is to build a solid defense line with our spaceships.<br>
 Therefore, we will continuously connect all our spaceships' onboard control systems.<br>
-In 2025, this strategy was known as "Agentic AI", and with watsonx we can build it up today!
+In 2026, this strategy was known as "Agentic AI", and with OpenWebUI we can build it up today!
 
 ## 💡Mission Requirements
 To successfully solve your first mission, you need to
-* write a so-called _Instruction_ for CSS Athena to enable the creation of battle plans
-* present your solution to one of the Space Instructors
+* write a so-called _System Prompt_ for CSS Athena to enable the creation of battle plans
+* present your solution to the Space Instructors Alina and Paul
 
 ## 🚀CSS Athena – The Battle Plan Agent
 A spaceship with access to an ancient web search tool. Has some kind of battlefield intelligence.
@@ -73,33 +73,28 @@ What is the plan?
 
 ## 🚀Setup CSS Athena – The Battle Plan Agent
 
-We will now create CSS Athena, the **Battle Plan Agent**, in watsonx.ai's **Agent Lab**.
+We will now create CSS Athena, the **Battle Plan Agent**, in **OpenWebUI**.
 
-You can open the IBM Cloud, following this link: https://cloud.ibm.com/resources
--> expand "AI / Machine Learning" and chose the third entry, product: "watsonx.ai Runtime"
--> Chose IBM watsonx via dropdown on button "Launch in"
-
-You are now on IBM watsonx (dataplattform.cloud.ibm.com/..)
--> Click (sandwich menu) -> Projects -> View all projects -> Open your project -> Open tab "Assets"
--> Click button "New asset" -> Search and click "Build an AI agent to automate tasks"
-![screenshot](assets/mission_1_screenshots/ibm_watsonx_screenshot_1.png)
+You can create new Agents in OpenWebUI on the left side panel via "Workspace" -> "New Model".
+![screenshot](assets/mission_1_screenshots/agent_builder.jpg)
 
 
 ### Setup
-Expand 'Setup' to enter
+Enter your spaceship configuration.
 1. **Name**:
    ```
    [Teamname] CSS Athena
    ```
-2. **Description**:
+1. **Base Model**:
    ```
-   CSS Athena - A spaceship  with access to an ancient web search tool. Can create Battle Plans.
+   Experiment with any model you like
+   ```
+1. **Description**:
+   ```
+   CSS Athena - A spaceship with access to an ancient web search tool. Can create Battle Plans.
    ```
 
-### Configuration
-1. Choose **LangGraph** as the framework.
-2. Select **ReAct** as the architecture.
-3. Enter your idea of **Instruction**. Remember: Writing this **Instruction** is your main mission goal. You can test your instruction on the fly in the "Agent preview" on the right side.
+1. Enter your idea of **System Prompt**. Remember: Writing this **System Prompt** is your main mission goal. You can test your instruction after saving and choosing CSS Athena in the model selection above your chatbox after creating a "New Chat" via the left side panel.
 
    ```
    Your are CSS Athena, the battle plan agent, ... <ROLE and CONTEXT>
@@ -112,29 +107,12 @@ Expand 'Setup' to enter
    The absolutely most important thing is ... <REINFORCEMENT and CONSTRAINTS>
    ```
 
-![screenshot](assets/mission_1_screenshots/ibm_watsonx_screenshot_2.png)
-
-
-### Tools
-The Google Search Tool is added by default to the Agent. However, if you accidentally click the delete icon, you can add it again.
+4. The Web Search Tool is added by ticking the checkboxes **Capabilities -> Web Search** and **Default Features -> Web Search**.
 
 ### Save your agent
-If you are fine with your agent(you can test your agent on the fly on the right side):
+If you are fine with your agent, click "Save" to have it available via the model selection button above the OpenWebUI chatbox, e.g. after creating a "New Chat" via the left side panel.
 
-1. Click on the Disk icon, then to **Save As**
-1. Select **Agent** and click **Save**
-
-### Deploy your agent
-1. Click on the **Deploy** button
-1. On the **Deploy as an AI service** page, you will be prompted to create a user api key. This will be used by **watsonx** to deploy your agent. Click on **Create**.
-1. You'll be directed to another webpage. Click on **Create a key**.
-1. Once a key is created, navigate back to **Deploy as an AI service** browser tab. Click on **Reload**.
-1. Create a new deployment space.
-![screenshot](assets/mission_1_screenshots/ibm_watsonx_screenshot_3.png)
-1. Once your space is created, click "Go to space".
-1. Once a space is created, navigate back to **Deploy as an AI service** browser tab. Click on **Reload** or reopen the window.
-1. Finally click on **Deploy** again, chose the deployment space you created and click on **Deploy** on the lower right.
-![screenshot](assets/mission_1_screenshots/ibm_watsonx_screenshot_4.png)
+![screenshot](assets/mission_1_screenshots/agent_try.jpg)
 
 ## 💾Submission
 * YOU DID IT! you just created and deployed your first AI Agent.
@@ -160,4 +138,4 @@ Our fleet has 2 red-shielded, 3 green-shielded and 5 blue-shielded spaceships to
 What is the plan?
 ```
 
-After Space Instructor Validation, start Mission 2: [Mission 2: The Fleet Orchestrator](mission_2_the_fleet_orchestrator.md).
+After Space Instructor Validation, start Mission 2: [Mission 2: The Fleet Sentinel](mission_2_the_fleet_sentinel.md).
